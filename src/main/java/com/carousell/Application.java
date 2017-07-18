@@ -1,5 +1,9 @@
 package com.carousell;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Created by a1dmiuxe(gopesh.tulsyan) on 18/07/17.
  */

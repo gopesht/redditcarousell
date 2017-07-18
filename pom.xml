@@ -18,7 +18,6 @@
 
     <dependencies>
         <!-- For having spring-mvc functionality -->
-        <!-- For having spring-mvc functionality -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
