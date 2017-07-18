@@ -1,0 +1,18 @@
+package com.carousell;
+
+/**
+ * Created by a1dmiuxe(gopesh.tulsyan) on 18/07/17.
+ */
+
+@SpringBootApplication
+@EnableAutoConfiguration
+public class Application {
+
+    public static void main(String[] args) {
+
+        // set environment property to pick the corresponding properties file
+        SpringApplication.run(Application.class, args);
+
+        System.out.println("server started! ------>");
+    }
+}
