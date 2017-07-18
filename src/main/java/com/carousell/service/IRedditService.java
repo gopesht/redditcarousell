@@ -1,6 +1,7 @@
 package com.carousell.service;
 
 import com.carousell.entities.Topic;
+import com.carousell.entities.User;
 
 import java.util.Iterator;
 
@@ -13,4 +14,11 @@ public interface IRedditService {
     int downVote(String topicId, String uid) throws IllegalArgumentException;
 
     Iterator<Topic> trendingTopics();
+
+
+    boolean createTopic(String content);
+
+    User createUser(String userName);
+
+    Iterator<Topic> allTopics();
 }
