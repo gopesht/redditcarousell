@@ -7,13 +7,23 @@ import java.util.List;
  * Created by a1dmiuxe(gopesh.tulsyan) on 15/07/17.
  */
 
-public class Topic implements Comparable<Topic>{
+public class Topic implements Comparable<Topic>, Cloneable{
 
     private String uid;
     private String content;
     private List<String> upvoters = new ArrayList<>();
     private List<String> downvoters = new ArrayList<>();
+    private String postedBy;
     private Long timestamp;
+
+
+    public String getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(String postedBy) {
+        this.postedBy = postedBy;
+    }
 
     public Long getTimestamp() {
         return timestamp;
@@ -82,13 +92,21 @@ public class Topic implements Comparable<Topic>{
         if (upvoters.size()>o.getUpvoters().size())
             return -1;
         else if (upvoters.size() == o.getUpvoters().size())
-            if (timestamp > o.getTimestamp())
+            if (timestamp>o.getTimestamp())
                 return -1;
-            else if (timestamp.equals(o.getTimestamp()))
+            else if (timestamp == o.getTimestamp())
                 return 0;
             else
                 return 1;
         else
             return 1;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Topic newTopic = (Topic) super.clone();
+        newTopic.setUpvoters(new ArrayList<>(this.getUpvoters()));
+        newTopic.setDownvoters(new ArrayList<>(this.getDownvoters()));
+        return newTopic;
     }
 }

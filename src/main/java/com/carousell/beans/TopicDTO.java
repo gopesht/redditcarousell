@@ -6,6 +6,15 @@ package com.carousell.beans;
 
 public class TopicDTO {
     private String content;
+    private String user;
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
 
     public String getContent() {
         return content;
