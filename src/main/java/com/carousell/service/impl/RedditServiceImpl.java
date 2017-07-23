@@ -64,7 +64,6 @@ public class RedditServiceImpl implements IRedditService {
         validate(user, topic);
 
         Topic oldTopic = (Topic) topic.clone();
-        topic.getUpvoters().add(user.getUid());
 
         topic.getDownvoters().add(user.getUid());
 
